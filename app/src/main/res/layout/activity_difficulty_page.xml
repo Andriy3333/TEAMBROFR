@@ -56,18 +56,6 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/LeaderboardButton"
-        android:layout_width="159dp"
-        android:layout_height="48dp"
-        android:text="Leaderboard"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EasyButton"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
         android:id="@+id/LoginButton"
         android:layout_width="100dp"
         android:layout_height="48dp"

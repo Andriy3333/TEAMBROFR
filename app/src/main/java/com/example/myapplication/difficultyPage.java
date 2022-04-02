@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+
 public class difficultyPage extends AppCompatActivity {
     private Button easyB;
     private Button normalB;
@@ -26,27 +27,27 @@ public class difficultyPage extends AppCompatActivity {
                 openLoginPage();
             }
         });
-//        normalB = (Button) findViewById(R.id.LoginButton);
-//        normalB.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                openNormalPage();
-//            }
-//        });
-//        easyB = (Button) findViewById(R.id.LoginButton);
-//        easyB.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                openEasyPage();
-//            }
-//        });
-//        hardB = (Button) findViewById(R.id.LoginButton);
-//        hardB.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                openHardPage();
-//            }
-//        });
+        normalB = (Button) findViewById(R.id.NormalButton);
+        normalB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openNormalPage();
+            }
+        });
+        easyB = (Button) findViewById(R.id.EasyButton);
+        easyB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openEasyPage();
+            }
+        });
+       hardB = (Button) findViewById(R.id.HardButton);
+        hardB.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View view) {
+                openHardPage();
+            }
+       });
     }
 
     public void showRules(View v){
@@ -65,18 +66,24 @@ public class difficultyPage extends AppCompatActivity {
         }
     }
 
-//    public void openEasyPage(){
-//        Intent intent = new Intent(this, GuessTheNumber.class);
-//        startActivity(intent);
-//    }
-//    public void openNormalPage(){
-//        Intent intent = new Intent(this, GuessTheNumber.class);
-//        startActivity(intent);
-//    }
-//    public void openHardPage(){
-//        Intent intent = new Intent(this, GuessTheNumber.class);
-//        startActivity(intent);
-//    }
+    public void openEasyPage(){
+        game_code easyGame = new game_code();
+        easyGame.startEasyDifficulty();
+        Intent intent = new Intent(this, game_code.class);
+        startActivity(intent);
+    }
+    public void openNormalPage(){
+        game_code normalGame = new game_code();
+        normalGame.startMediumDifficulty();
+        Intent intent = new Intent(this, game_code.class);
+        startActivity(intent);
+    }
+    public void openHardPage(){
+        game_code hardGame = new game_code();
+        hardGame.startHardDifficulty();
+        Intent intent = new Intent(this, game_code.class);
+        startActivity(intent);
+    }
     public void openLoginPage(){
         Intent intent = new Intent(this, loginPage.class);
         startActivity(intent);
